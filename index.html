@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+  <title>Pérez Beltrán Interiores — Diseño en pladur</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f7f4ee; }
+    a { color: #c9a869; text-decoration: none; }
+    a:hover { color: #a9863f; }
+    ::selection { background: #c9a869; color: #14120f; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+  </style>
+</helmet>
+
+<div style="font-family: 'Manrope', sans-serif; background: #f7f4ee; color: #24211b; overflow-x: hidden;">
+
+  <!-- HEADER -->
+  <header style="position: sticky; top: 0; z-index: 100; background: rgba(20,18,15,0.97); backdrop-filter: blur(6px); border-bottom: 1px solid rgba(201,168,105,0.25);">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 14px 32px; display: flex; align-items: center; justify-content: space-between; gap: 20px;">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <img src="assets/logo.jpg" alt="Pérez Beltrán Interiores" style="width: 46px; height: 46px; border-radius: 8px; object-fit: cover;" />
+        <div style="line-height: 1.1;">
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 21px; font-weight: 600; color: #f5f1ea; letter-spacing: 0.02em;">Pérez Beltrán</div>
+          <div style="font-size: 10px; letter-spacing: 0.22em; color: #c9a869; text-transform: uppercase;">Diseño en pladur</div>
+        </div>
+      </div>
+      <nav style="display: flex; align-items: center; gap: 26px;">
+        <a href="#servicios" style="font-size: 14px; color: #e7e2d8;">Servicios</a>
+        <a href="#proceso" style="font-size: 14px; color: #e7e2d8;">Proceso</a>
+        <a href="#proyectos" style="font-size: 14px; color: #e7e2d8;">Proyectos</a>
+        <a href="#nosotros" style="font-size: 14px; color: #e7e2d8;">Nosotros</a>
+        <a href="#faq" style="font-size: 14px; color: #e7e2d8;">FAQ</a>
+        <a href="{{ waLink }}" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 8px; background: #c9a869; color: #14120f; padding: 10px 20px; border-radius: 2px; font-weight: 700; font-size: 13px; letter-spacing: 0.03em;" style-hover="background: #e0bc7f;">
+          <span>Pedir presupuesto</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section style="position: relative; background: #14120f repeating-linear-gradient(135deg, rgba(201,168,105,0.04) 0px, rgba(201,168,105,0.04) 1px, transparent 1px, transparent 64px); color: #f5f1ea; padding: 110px 32px 0; overflow: hidden;">
+    <div style="position: absolute; top: -120px; right: -160px; width: 480px; height: 480px; border: 1px solid rgba(201,168,105,0.25); transform: rotate(45deg);"></div>
+    <div style="position: absolute; bottom: -200px; left: -140px; width: 420px; height: 420px; border: 1px solid rgba(201,168,105,0.15); transform: rotate(20deg);"></div>
+    <div style="max-width: 1280px; margin: 0 auto; position: relative; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center; padding-bottom: 90px;">
+      <div style="animation: fadeUp 0.8s ease both;">
+        <div style="display: inline-flex; align-items: center; gap: 10px; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #c9a869; margin-bottom: 24px;">
+          <span style="width: 28px; height: 1px; background: #c9a869;"></span>
+          Diseño y ejecución en pladur
+        </div>
+        <h1 style="font-family: 'Cormorant Garamond', serif; font-size: 60px; line-height: 1.05; font-weight: 600; margin: 0 0 24px; letter-spacing: 0.01em;">
+          Pladur a medida<br/>para espacios que <em style="font-style: italic; color: #c9a869;">impresionan</em>
+        </h1>
+        <p style="font-size: 18px; line-height: 1.6; color: #cbc5b8; max-width: 480px; margin: 0 0 40px;">
+          Techos, tabiques, trasdosados y acabados decorativos en pladur, ejecutados con precisión artesanal. Pide presupuesto hoy mismo, sin compromiso.
+        </p>
+        <div style="display: flex; flex-wrap: wrap; gap: 16px;">
+          <a href="{{ waLink }}" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 10px; background: #c9a869; color: #14120f; padding: 16px 30px; font-weight: 700; font-size: 15px; border-radius: 2px;" style-hover="background: #e0bc7f;">
+            Presupuesto por WhatsApp
+          </a>
+          <a href="tel:+34662959712" style="display: flex; align-items: center; gap: 10px; border: 1px solid rgba(245,241,234,0.35); color: #f5f1ea; padding: 16px 30px; font-weight: 600; font-size: 15px; border-radius: 2px;" style-hover="border-color: #c9a869; color: #c9a869;">
+            +34 662 95 97 12
+          </a>
+        </div>
+        <div style="display: flex; gap: 48px; margin-top: 56px; padding-top: 32px; border-top: 1px solid rgba(245,241,234,0.12);">
+          <div>
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 32px; color: #c9a869; font-weight: 600;">Oficio</div>
+            <div style="font-size: 13px; color: #a39d8e;">Acabados cuidados al detalle</div>
+          </div>
+          <div>
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 32px; color: #c9a869; font-weight: 600;">A medida</div>
+            <div style="font-size: 13px; color: #a39d8e;">Cada proyecto, único</div>
+          </div>
+          <div>
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 32px; color: #c9a869; font-weight: 600;">Sin compromiso</div>
+            <div style="font-size: 13px; color: #a39d8e;">Presupuesto gratis</div>
+          </div>
+        </div>
+      </div>
+      <div style="position: relative; animation: fadeUp 1s ease both;">
+        <div style="position: absolute; inset: -14px; border: 1px solid rgba(201,168,105,0.4); z-index: 0;"></div>
+        <div style="position: relative; z-index: 1; width: 100%; height: 460px; display: flex; align-items: center; justify-content: center; background: #1c1a16; padding: 48px;">
+          <img src="assets/logo.jpg" alt="Pérez Beltrán Interiores" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block;" />
+        </div>
+      </div>
+    </div>
+    <div style="position: relative; border-top: 1px solid rgba(201,168,105,0.2); border-bottom: 1px solid rgba(201,168,105,0.2); overflow: hidden; padding: 18px 0; background: #1c1a16;">
+      <div style="display: flex; width: max-content; animation: marquee 70s linear infinite;">
+<div style="display: flex; align-items: center; gap: 16px; padding: 0 28px; white-space: nowrap;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #cbc5b8; letter-spacing: 0.02em;">Techos continuos</span><span style="width: 6px; height: 6px; background: #c9a869; transform: rotate(45deg); display: inline-block;"></span></div>
+        <div style="display: flex; align-items: center; gap: 16px; padding: 0 28px; white-space: nowrap;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #cbc5b8; letter-spacing: 0.02em;">Tabiquería</span><span style="width: 6px; height: 6px; background: #c9a869; transform: rotate(45deg); display: inline-block;"></span></div>
+        <div style="display: flex; align-items: center; gap: 16px; padding: 0 28px; white-space: nowrap;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #cbc5b8; letter-spacing: 0.02em;">Trasdosados</span><span style="width: 6px; height: 6px; background: #c9a869; transform: rotate(45deg); display: inline-block;"></span></div>
+        <div style="display: flex; align-items: center; gap: 16px; padding: 0 28px; white-space: nowrap;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #cbc5b8; letter-spacing: 0.02em;">Bóvedas a medida</span><span style="width: 6px; height: 6px; background: #c9a869; transform: rotate(45deg); display: inline-block;"></span></div>
+        <div style="display: flex; align-items: center; gap: 16px; padding: 0 28px; white-space: nowrap;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #cbc5b8; letter-spacing: 0.02em;">Aislamiento acústico</span><span style="width: 6px; height: 6px; background: #c9a869; transform: rotate(45deg); display: inline-block;"></span></div>
+        <div style="display: flex; align-items: center; gap: 16px; padding: 0 28px; white-space: nowrap;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #cbc5b8; letter-spacing: 0.02em;">Molduras y luz indirecta</span><span style="width: 6px; height: 6px; background: #c9a869; transform: rotate(45deg); display: inline-block;"></span></div>
+        <div style="display: flex; align-items: center; gap: 16px; padding: 0 28px; white-space: nowrap;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #cbc5b8; letter-spacing: 0.02em;">Reformas integrales</span><span style="width: 6px; height: 6px; background: #c9a869; transform: rotate(45deg); display: inline-block;"></span></div>
+        <div style="display: flex; align-items: center; gap: 16px; padding: 0 28px; white-space: nowrap;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #cbc5b8; letter-spacing: 0.02em;">Techos continuos</span><span style="width: 6px; height: 6px; background: #c9a869; transform: rotate(45deg); display: inline-block;"></span></div>
+        <div style="display: flex; align-items: center; gap: 16px; padding: 0 28px; white-space: nowrap;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #cbc5b8; letter-spacing: 0.02em;">Tabiquería</span><span style="width: 6px; height: 6px; background: #c9a869; transform: rotate(45deg); display: inline-block;"></span></div>
+        <div style="display: flex; align-items: center; gap: 16px; padding: 0 28px; white-space: nowrap;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #cbc5b8; letter-spacing: 0.02em;">Trasdosados</span><span style="width: 6px; height: 6px; background: #c9a869; transform: rotate(45deg); display: inline-block;"></span></div>
+        <div style="display: flex; align-items: center; gap: 16px; padding: 0 28px; white-space: nowrap;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #cbc5b8; letter-spacing: 0.02em;">Bóvedas a medida</span><span style="width: 6px; height: 6px; background: #c9a869; transform: rotate(45deg); display: inline-block;"></span></div>
+        <div style="display: flex; align-items: center; gap: 16px; padding: 0 28px; white-space: nowrap;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #cbc5b8; letter-spacing: 0.02em;">Aislamiento acústico</span><span style="width: 6px; height: 6px; background: #c9a869; transform: rotate(45deg); display: inline-block;"></span></div>
+        <div style="display: flex; align-items: center; gap: 16px; padding: 0 28px; white-space: nowrap;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #cbc5b8; letter-spacing: 0.02em;">Molduras y luz indirecta</span><span style="width: 6px; height: 6px; background: #c9a869; transform: rotate(45deg); display: inline-block;"></span></div>
+        <div style="display: flex; align-items: center; gap: 16px; padding: 0 28px; white-space: nowrap;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #cbc5b8; letter-spacing: 0.02em;">Reformas integrales</span><span style="width: 6px; height: 6px; background: #c9a869; transform: rotate(45deg); display: inline-block;"></span></div>
+        <div style="display: flex; align-items: center; gap: 16px; padding: 0 28px; white-space: nowrap;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #cbc5b8; letter-spacing: 0.02em;">Techos continuos</span><span style="width: 6px; height: 6px; background: #c9a869; transform: rotate(45deg); display: inline-block;"></span></div>
+        <div style="display: flex; align-items: center; gap: 16px; padding: 0 28px; white-space: nowrap;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #cbc5b8; letter-spacing: 0.02em;">Tabiquería</span><span style="width: 6px; height: 6px; background: #c9a869; transform: rotate(45deg); display: inline-block;"></span></div>
+        <div style="display: flex; align-items: center; gap: 16px; padding: 0 28px; white-space: nowrap;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #cbc5b8; letter-spacing: 0.02em;">Trasdosados</span><span style="width: 6px; height: 6px; background: #c9a869; transform: rotate(45deg); display: inline-block;"></span></div>
+        <div style="display: flex; align-items: center; gap: 16px; padding: 0 28px; white-space: nowrap;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #cbc5b8; letter-spacing: 0.02em;">Bóvedas a medida</span><span style="width: 6px; height: 6px; background: #c9a869; transform: rotate(45deg); display: inline-block;"></span></div>
+        <div style="display: flex; align-items: center; gap: 16px; padding: 0 28px; white-space: nowrap;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #cbc5b8; letter-spacing: 0.02em;">Aislamiento acústico</span><span style="width: 6px; height: 6px; background: #c9a869; transform: rotate(45deg); display: inline-block;"></span></div>
+        <div style="display: flex; align-items: center; gap: 16px; padding: 0 28px; white-space: nowrap;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #cbc5b8; letter-spacing: 0.02em;">Molduras y luz indirecta</span><span style="width: 6px; height: 6px; background: #c9a869; transform: rotate(45deg); display: inline-block;"></span></div>
+        <div style="display: flex; align-items: center; gap: 16px; padding: 0 28px; white-space: nowrap;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #cbc5b8; letter-spacing: 0.02em;">Reformas integrales</span><span style="width: 6px; height: 6px; background: #c9a869; transform: rotate(45deg); display: inline-block;"></span></div>
+        <div style="display: flex; align-items: center; gap: 16px; padding: 0 28px; white-space: nowrap;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #cbc5b8; letter-spacing: 0.02em;">Techos continuos</span><span style="width: 6px; height: 6px; background: #c9a869; transform: rotate(45deg); display: inline-block;"></span></div>
+        <div style="display: flex; align-items: center; gap: 16px; padding: 0 28px; white-space: nowrap;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #cbc5b8; letter-spacing: 0.02em;">Tabiquería</span><span style="width: 6px; height: 6px; background: #c9a869; transform: rotate(45deg); display: inline-block;"></span></div>
+        <div style="display: flex; align-items: center; gap: 16px; padding: 0 28px; white-space: nowrap;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #cbc5b8; letter-spacing: 0.02em;">Trasdosados</span><span style="width: 6px; height: 6px; background: #c9a869; transform: rotate(45deg); display: inline-block;"></span></div>
+        <div style="display: flex; align-items: center; gap: 16px; padding: 0 28px; white-space: nowrap;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #cbc5b8; letter-spacing: 0.02em;">Bóvedas a medida</span><span style="width: 6px; height: 6px; background: #c9a869; transform: rotate(45deg); display: inline-block;"></span></div>
+        <div style="display: flex; align-items: center; gap: 16px; padding: 0 28px; white-space: nowrap;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #cbc5b8; letter-spacing: 0.02em;">Aislamiento acústico</span><span style="width: 6px; height: 6px; background: #c9a869; transform: rotate(45deg); display: inline-block;"></span></div>
+        <div style="display: flex; align-items: center; gap: 16px; padding: 0 28px; white-space: nowrap;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #cbc5b8; letter-spacing: 0.02em;">Molduras y luz indirecta</span><span style="width: 6px; height: 6px; background: #c9a869; transform: rotate(45deg); display: inline-block;"></span></div>
+        <div style="display: flex; align-items: center; gap: 16px; padding: 0 28px; white-space: nowrap;"><span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #cbc5b8; letter-spacing: 0.02em;">Reformas integrales</span><span style="width: 6px; height: 6px; background: #c9a869; transform: rotate(45deg); display: inline-block;"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios" style="padding: 110px 32px; background: #f7f4ee;">
+    <div style="max-width: 1280px; margin: 0 auto;">
+      <div style="max-width: 620px; margin: 0 0 56px;">
+        <div style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #a9863f; margin-bottom: 14px;">Nuestros servicios</div>
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 600; margin: 0 0 16px; color: #14120f;">Todo lo que necesita tu proyecto en pladur</h2>
+        <p style="font-size: 16px; color: #57503f; line-height: 1.6;">Desde una reforma de vivienda hasta un local comercial completo. Diseñamos y ejecutamos cada detalle.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: #e4ddcc; border: 1px solid #e4ddcc;">
+        <sc-for list="{{ servicios }}" as="s" hint-placeholder-count="6">
+          <div style="background: #f7f4ee; padding: 40px 32px; transition: background 0.3s ease;" style-hover="background: #fffdf7;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 22px;">
+              <div style="width: 46px; height: 46px; border: 1px solid #c9a869; display: flex; align-items: center; justify-content: center; transform: rotate(45deg);">
+                <div style="width: 16px; height: 16px; background: #c9a869;"></div>
+              </div>
+              <span style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #a9863f; border: 1px solid rgba(169,134,63,0.4); padding: 4px 10px;">{{ s.tag }}</span>
+            </div>
+            <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 23px; font-weight: 600; margin: 0 0 10px; color: #14120f;">{{ s.title }}</h3>
+            <p style="font-size: 15px; line-height: 1.6; color: #6b6455; margin: 0;">{{ s.desc }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section id="proceso" style="padding: 110px 32px; background: #1c1a16 repeating-linear-gradient(135deg, rgba(201,168,105,0.035) 0px, rgba(201,168,105,0.035) 1px, transparent 1px, transparent 64px); color: #f5f1ea;">
+    <div style="max-width: 1280px; margin: 0 auto;">
+      <div style="max-width: 620px; margin: 0 0 64px;">
+        <div style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #c9a869; margin-bottom: 14px;">Cómo trabajamos</div>
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 600; margin: 0 0 16px;">De la idea al acabado final</h2>
+        <p style="font-size: 16px; color: #a39d8e; line-height: 1.6;">Un proceso claro, sin sorpresas, pensado para que sepas en todo momento en qué punto está tu proyecto.</p>
+      </div>
+      <div style="display: flex; align-items: flex-start;">
+        <sc-for list="{{ proceso }}" as="step" hint-placeholder-count="4">
+          <div style="display: flex; align-items: center; flex: 1;">
+            <div style="min-width: 0; flex: 1;">
+              <div style="width: 52px; height: 52px; border-radius: 50%; border: 1px solid #c9a869; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 21px; color: #c9a869; margin-bottom: 22px;">{{ step.n }}</div>
+              <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; margin: 0 0 10px; color: #f5f1ea; padding-right: 12px;">{{ step.title }}</h3>
+              <p style="font-size: 14px; line-height: 1.6; color: #a39d8e; margin: 0; padding-right: 20px;">{{ step.desc }}</p>
+            </div>
+            <sc-if value="{{ step.hasNext }}" hint-placeholder-val="{{ true }}">
+              <div style="height: 1px; background: rgba(201,168,105,0.3); flex: 0 0 40px; margin: 26px 0 0;"></div>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <section style="background: #f0ebe0; padding: 32px; border-top: 1px solid #ded5bf; border-bottom: 1px solid #ded5bf;">
+    <div style="max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr);">
+      <sc-for list="{{ trustPoints }}" as="tp" hint-placeholder-count="4">
+        <div style="display: flex; align-items: center; gap: 14px; justify-content: center; padding: 8px 16px;">
+          <span style="width: 8px; height: 8px; background: #c9a869; transform: rotate(45deg); flex-shrink: 0;"></span>
+          <span style="font-size: 14px; font-weight: 600; color: #14120f;">{{ tp }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- PROYECTOS / GALERIA -->
+  <section id="proyectos" style="padding: 110px 32px; background: #14120f repeating-linear-gradient(135deg, rgba(201,168,105,0.035) 0px, rgba(201,168,105,0.035) 1px, transparent 1px, transparent 64px);">
+    <div style="max-width: 1280px; margin: 0 auto;">
+      <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 48px; flex-wrap: wrap;">
+        <div style="max-width: 560px;">
+          <div style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #c9a869; margin-bottom: 14px;">Trabajos realizados</div>
+          <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 600; margin: 0; color: #f5f1ea;">Proyectos que hablan por nosotros</h2>
+        </div>
+        <a href="{{ waLink }}" target="_blank" rel="noopener" style="font-size: 14px; font-weight: 600; color: #c9a869; display: flex; align-items: center; gap: 8px; white-space: nowrap;">
+          Quiero algo así →
+        </a>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 160px; gap: 4px;">
+        <sc-for list="{{ proyectos }}" as="proj" hint-placeholder-count="7">
+          <div onclick="{{ proj.onOpen }}" style="position: relative; overflow: hidden; grid-column: span {{ proj.colSpan }}; grid-row: span {{ proj.rowSpan }}; cursor: pointer;">
+            <img src="{{ proj.img }}" alt="{{ proj.alt }}" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; filter: saturate(0.95);" style-hover="transform: scale(1.06);" />
+            <div style="position: absolute; inset: auto 0 0 0; padding: 16px 18px; background: linear-gradient(to top, rgba(0,0,0,0.78), transparent);">
+              <div style="color: #f5f1ea; font-size: 14px; font-weight: 600;">{{ proj.title }}</div>
+            </div>
+            <div style="position: absolute; top: 12px; right: 12px; width: 30px; height: 30px; border-radius: 50%; background: rgba(20,18,15,0.6); display: flex; align-items: center; justify-content: center; color: #c9a869; font-size: 16px;">⤢</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <sc-if value="{{ lightboxOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="position: fixed; inset: 0; z-index: 300; background: rgba(10,9,7,0.94); display: flex; align-items: center; justify-content: center;" onclick="{{ closeLightbox }}">
+      <div onclick="{{ stop }}" style="position: relative; max-width: 82vw; max-height: 82vh;">
+        <img src="{{ activeImage.img }}" alt="{{ activeImage.alt }}" style="max-width: 82vw; max-height: 74vh; display: block; object-fit: contain; margin: 0 auto;" />
+        <div style="text-align: center; color: #f5f1ea; margin-top: 18px; font-family: 'Cormorant Garamond', serif; font-size: 20px;">{{ activeImage.title }}</div>
+      </div>
+      <button onclick="{{ prevImage }}" style="position: absolute; left: 24px; top: 50%; transform: translateY(-50%); background: none; border: 1px solid rgba(245,241,234,0.3); color: #f5f1ea; width: 48px; height: 48px; border-radius: 50%; font-size: 20px; cursor: pointer;">‹</button>
+      <button onclick="{{ nextImage }}" style="position: absolute; right: 24px; top: 50%; transform: translateY(-50%); background: none; border: 1px solid rgba(245,241,234,0.3); color: #f5f1ea; width: 48px; height: 48px; border-radius: 50%; font-size: 20px; cursor: pointer;">›</button>
+      <button onclick="{{ closeLightbox }}" style="position: absolute; top: 28px; right: 28px; background: none; border: none; color: #f5f1ea; font-size: 30px; cursor: pointer; line-height: 1;">×</button>
+    </div>
+  </sc-if>
+
+  <!-- NOSOTROS -->
+  <section id="nosotros" style="padding: 110px 32px; background: #f7f4ee;">
+    <div style="max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 64px; align-items: center;">
+      <div style="position: relative;">
+        <img src="assets/gallery-marca.jpg" alt="Instalación de pladur Pérez Beltrán" style="width: 100%; height: 560px; object-fit: cover; display: block;" />
+        <div style="position: absolute; bottom: -24px; right: -24px; background: #14120f; color: #f5f1ea; padding: 22px 26px; max-width: 220px; border: 1px solid rgba(201,168,105,0.4);">
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 28px; color: #c9a869; font-weight: 600;">Hecho a mano</div>
+          <div style="font-size: 13px; color: #a39d8e; margin-top: 6px;">cada pieza, estudiada y ejecutada a medida</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #a9863f; margin-bottom: 14px;">Quiénes somos</div>
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 600; margin: 0 0 24px; color: #14120f;">Especialistas en pladur, con oficio y detalle</h2>
+        <p style="font-size: 16px; line-height: 1.75; color: #57503f; margin: 0 0 20px;">
+          En Pérez Beltrán Interiores trabajamos el pladur como un oficio de precisión: techos continuos, bóvedas, tabiques, trasdosados y mobiliario integrado, tanto para particulares como para empresas y constructoras.
+        </p>
+        <p style="font-size: 16px; line-height: 1.75; color: #57503f; margin: 0 0 32px;">
+          Cuidamos cada detalle: desde la primera medición hasta el último remate, con materiales de calidad y un acabado que se nota.
+        </p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px 32px;">
+          <sc-for list="{{ features }}" as="f" hint-placeholder-count="4">
+            <div style="border-left: 2px solid #c9a869; padding-left: 18px;">
+              <div style="font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 600; color: #14120f;">{{ f.title }}</div>
+              <div style="font-size: 14px; color: #6b6455; margin-top: 4px;">{{ f.desc }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COBERTURA -->
+  <section style="padding: 100px 32px; background: #14120f repeating-linear-gradient(135deg, rgba(201,168,105,0.035) 0px, rgba(201,168,105,0.035) 1px, transparent 1px, transparent 64px); color: #f5f1ea; overflow: hidden;">
+    <div style="max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
+      <div>
+        <div style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #c9a869; margin-bottom: 14px;">Dónde trabajamos</div>
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 600; margin: 0 0 20px;">Movilidad real, en toda España</h2>
+        <p style="font-size: 16px; line-height: 1.75; color: #a39d8e; margin: 0 0 28px; max-width: 480px;">
+          No nos limitamos a una zona. Estudiamos cada proyecto según su ubicación y alcance, y nos organizamos para ejecutarlo con la misma exigencia estés donde estés.
+        </p>
+      </div>
+      <div style="position: relative; height: 340px; display: flex; align-items: center; justify-content: center;">
+        <div style="position: absolute; width: 320px; height: 320px; border: 1px solid rgba(201,168,105,0.15); transform: rotate(45deg);"></div>
+        <div style="position: absolute; width: 230px; height: 230px; border: 1px solid rgba(201,168,105,0.28); transform: rotate(45deg);"></div>
+        <div style="position: absolute; width: 140px; height: 140px; border: 1px solid rgba(201,168,105,0.45); transform: rotate(45deg);"></div>
+        <div style="position: relative; width: 60px; height: 60px; background: #c9a869; transform: rotate(45deg); display: flex; align-items: center; justify-content: center;">
+          <span style="transform: rotate(-45deg); font-family: 'Cormorant Garamond', serif; font-weight: 600; color: #14120f; font-size: 12px; letter-spacing: 0.05em; text-align: center;">PB</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" style="padding: 110px 32px; background: #f0ebe0;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 56px;">
+        <div style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #a9863f; margin-bottom: 14px;">Preguntas frecuentes</div>
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 38px; font-weight: 600; margin: 0; color: #14120f;">Resolvemos tus dudas</h2>
+      </div>
+      <sc-for list="{{ faqs }}" as="faq" hint-placeholder-count="5">
+        <div style="border-bottom: 1px solid #ded5bf;">
+          <div onclick="{{ faq.onToggle }}" style="display: flex; align-items: center; justify-content: space-between; padding: 22px 4px; cursor: pointer; gap: 20px;">
+            <span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; color: #14120f;">{{ faq.q }}</span>
+            <span style="font-size: 22px; color: #c9a869; min-width: 20px; text-align: center;">{{ faq.symbol }}</span>
+          </div>
+          <sc-if value="{{ faq.isOpen }}" hint-placeholder-val="{{ false }}">
+            <p style="margin: 0 4px 22px; font-size: 15px; line-height: 1.7; color: #57503f; max-width: 640px;">{{ faq.a }}</p>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section style="position: relative; padding: 130px 32px; background: #1c1a16; color: #f5f1ea; text-align: center; overflow: hidden;">
+    <img src="assets/gallery-tecno.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.18;" />
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(28,26,22,0.7), #1c1a16 85%);"></div>
+    <div style="position: absolute; top: 50%; left: 50%; width: 700px; height: 700px; border: 1px solid rgba(201,168,105,0.15); transform: translate(-50%,-50%) rotate(45deg);"></div>
+    <div style="max-width: 640px; margin: 0 auto; position: relative;">
+      <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 46px; font-weight: 600; margin: 0 0 20px;">¿Tienes un proyecto en mente?</h2>
+      <p style="font-size: 17px; color: #cbc5b8; line-height: 1.6; margin: 0 0 40px;">Cuéntanos qué necesitas y te preparamos un presupuesto sin compromiso. Respuesta rápida por WhatsApp.</p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="{{ waLink }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 12px; background: #c9a869; color: #14120f; padding: 18px 40px; font-weight: 700; font-size: 16px; border-radius: 2px;" style-hover="background: #e0bc7f;">
+          Pedir presupuesto por WhatsApp
+        </a>
+        <a href="tel:+34662959712" style="display: inline-flex; align-items: center; gap: 12px; border: 1px solid rgba(245,241,234,0.35); color: #f5f1ea; padding: 18px 40px; font-weight: 600; font-size: 16px; border-radius: 2px;" style-hover="border-color: #c9a869; color: #c9a869;">
+          Llamar ahora
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background: #14120f; color: #a39d8e; padding: 56px 32px 32px;">
+    <div style="max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(245,241,234,0.1);">
+      <div>
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+          <img src="assets/logo.jpg" alt="Pérez Beltrán Interiores" style="width: 40px; height: 40px; border-radius: 6px; object-fit: cover;" />
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 19px; color: #f5f1ea; font-weight: 600;">Pérez Beltrán Interiores</div>
+        </div>
+        <p style="font-size: 14px; line-height: 1.6; max-width: 320px;">Diseño y ejecución en pladur, con acabados de precisión.</p>
+      </div>
+      <div>
+        <div style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #c9a869; margin-bottom: 16px;">Contacto</div>
+        <div style="font-size: 14px; line-height: 2;">
+          <div><a href="tel:+34662959712" style="color: #e7e2d8;">+34 662 95 97 12</a></div>
+        </div>
+      </div>
+      <div>
+        <div style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #c9a869; margin-bottom: 16px;">Navegación</div>
+        <div style="font-size: 14px; line-height: 2;">
+          <div><a href="#servicios" style="color: #e7e2d8;">Servicios</a></div>
+          <div><a href="#proyectos" style="color: #e7e2d8;">Proyectos</a></div>
+          <div><a href="#nosotros" style="color: #e7e2d8;">Nosotros</a></div>
+          <div><a href="#faq" style="color: #e7e2d8;">Preguntas frecuentes</a></div>
+        </div>
+      </div>
+    </div>
+    <div style="max-width: 1280px; margin: 0 auto; padding-top: 24px; font-size: 13px;">© 2026 Pérez Beltrán Interiores — Diseño en pladur.</div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="{{ waLink }}" target="_blank" rel="noopener" style="position: fixed; bottom: 28px; right: 28px; z-index: 200; background: #c9a869; color: #14120f; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,0.35);" style-hover="background: #e0bc7f;">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.35 5.07L2 22l5.07-1.32C8.53 21.5 10.22 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.22.62-1.28 1.18-1.77 1.24-.45.06-.99.09-1.6-.1-.37-.11-.84-.27-1.44-.53-2.54-1.1-4.2-3.66-4.33-3.83-.13-.17-1.03-1.37-1.03-2.62 0-1.25.66-1.86.89-2.12.23-.26.5-.32.66-.32.17 0 .33 0 .48.01.15.01.36-.06.56.43.22.53.75 1.83.81 1.97.06.14.1.3.02.48-.08.18-.12.29-.24.44-.12.15-.25.34-.36.46-.12.12-.24.25-.11.49.14.24.61 1.01 1.31 1.64.9.8 1.65 1.05 1.9 1.17.25.12.39.1.53-.06.15-.16.63-.73.79-.98.16-.25.32-.21.53-.12.22.08 1.38.65 1.61.77.24.12.4.18.46.28.06.11.06.6-.15 1.19z"/></svg>
+  </a>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lightboxIndex: null, openFaq: 0 };
+
+  renderVals() {
+    const waLink = "https://wa.me/34662959712?text=" + encodeURIComponent("Hola, me gustaría pedir presupuesto para un trabajo en pladur.");
+
+    const servicios = [
+      { title: "Techos de pladur", tag: "Techos", desc: "Falsos techos continuos, registrables o con iluminación integrada, adaptados a cualquier espacio." },
+      { title: "Tabiques y divisiones", tag: "Tabiquería", desc: "Separación de espacios rápida, limpia y sin obras invasivas, con aislamiento incluido." },
+      { title: "Trasdosados", tag: "Paredes", desc: "Revestimiento de paredes para mejorar aislamiento, corregir irregularidades y preparar acabados." },
+      { title: "Aislamiento acústico y térmico", tag: "Confort", desc: "Soluciones para ganar silencio y eficiencia energética en tu vivienda o local." },
+      { title: "Decoración y molduras", tag: "Diseño", desc: "Molduras, huecos de luz indirecta y formas curvas que dan personalidad a cada estancia." },
+      { title: "Reformas integrales en pladur", tag: "Reformas", desc: "Proyectos completos, desde el diseño hasta el acabado final, para particulares y empresas." }
+    ];
+
+    const proceso = [
+      { n: "01", title: "Contacto", desc: "Nos cuentas tu proyecto por WhatsApp o teléfono, sin compromiso." },
+      { n: "02", title: "Estudio del espacio", desc: "Valoramos las mejores soluciones, in situ o a distancia según el proyecto." },
+      { n: "03", title: "Presupuesto", desc: "Te lo enviamos claro, detallado y sin sorpresas de última hora." },
+      { n: "04", title: "Ejecución y entrega", desc: "Trabajo limpio, cuidado y entregado en el plazo acordado.", hasNext: false }
+    ].map((p, i, arr) => ({ ...p, hasNext: i < arr.length - 1 }));
+
+    const proyectosRaw = [
+      { img: "assets/gallery-boveda-1.jpg", title: "Bóvedas de crucería a medida", alt: "Bóveda de pladur en corredor", colSpan: 2, rowSpan: 2 },
+      { img: "assets/gallery-salon.jpg", title: "Techo continuo con iluminación", alt: "Salón con techo de pladur y focos empotrados", colSpan: 2, rowSpan: 1 },
+      { img: "assets/gallery-tecno.jpg", title: "Techos técnicos con iluminación LED", alt: "Techo perforado con perfil de luz integrado", colSpan: 1, rowSpan: 1 },
+      { img: "assets/gallery-boveda-2.jpg", title: "Detalle de bóveda en pladur", alt: "Detalle de arco en pladur", colSpan: 1, rowSpan: 1 },
+      { img: "assets/gallery-estanteria.jpg", title: "Mobiliario integrado", alt: "Estantería a medida en pladur", colSpan: 1, rowSpan: 1 }
+    ];
+
+    const features = [
+      { title: "Presupuesto claro", desc: "Sin letra pequeña ni sorpresas" },
+      { title: "Materiales de calidad", desc: "Acabados pensados para durar" },
+      { title: "Acabado impecable", desc: "Cuidamos cada detalle" },
+      { title: "Trato directo", desc: "Hablas siempre con quien ejecuta" }
+    ];
+
+    const faqsRaw = [
+      { q: "¿Cuánto tarda una obra de pladur?", a: "Depende del alcance: un techo o tabique sencillo puede resolverse en pocos días, mientras que una reforma integral requiere más tiempo. En la visita te damos un plazo estimado real." },
+      { q: "¿El pladur aísla del ruido y del calor?", a: "Sí. Con el tipo de placa y el aislamiento interior adecuados conseguimos mejorar notablemente el confort acústico y térmico de la estancia." },
+      { q: "¿Se puede tabicar sin obra sucia?", a: "El pladur es precisamente la solución para eso: montaje en seco, rápido y con muchísimo menos escombro y polvo que un tabique de ladrillo." },
+      { q: "¿Trabajáis fuera de la Región de Murcia?", a: "Sí, tenemos cobertura en toda España. Según la ubicación y el alcance del proyecto, valoramos si conviene una visita in situ o resolverlo a distancia, y te lo confirmamos al contactar." },
+      { q: "¿Cómo se calcula el presupuesto?", a: "Tras estudiar el espacio y las necesidades del proyecto, te enviamos un presupuesto detallado por partidas: materiales, mano de obra y acabados, sin compromiso." }
+    ];
+
+    const proyectos = proyectosRaw.map((p, i) => ({ ...p, onOpen: () => this.setState({ lightboxIndex: i }) }));
+    const faqs = faqsRaw.map((f, i) => ({ ...f, isOpen: this.state.openFaq === i, symbol: this.state.openFaq === i ? "–" : "+", onToggle: () => this.setState(s => ({ openFaq: s.openFaq === i ? null : i })) }));
+
+    const trustPoints = ["Presupuesto sin compromiso", "Respuesta ágil por WhatsApp", "Montaje limpio en seco", "Materiales de calidad"];
+
+    const lightboxOpen = this.state.lightboxIndex !== null;
+    const activeImage = lightboxOpen ? proyectos[this.state.lightboxIndex] : proyectos[0];
+
+    return {
+      waLink, servicios, proceso, proyectos, features, faqs, trustPoints,
+      lightboxOpen, activeImage,
+      closeLightbox: () => this.setState({ lightboxIndex: null }),
+      stop: (e) => e.stopPropagation(),
+      nextImage: (e) => { e.stopPropagation(); this.setState(s => ({ lightboxIndex: (s.lightboxIndex + 1) % proyectos.length })); },
+      prevImage: (e) => { e.stopPropagation(); this.setState(s => ({ lightboxIndex: (s.lightboxIndex - 1 + proyectos.length) % proyectos.length })); }
+    };
+  }
+}
+
+</script>
+</body>
+</html>
